@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		27104799207BEFDC003C8FB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27104798207BEFDC003C8FB8 /* AppDelegate.swift */; };
-		2710479B207BEFDC003C8FB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710479A207BEFDC003C8FB8 /* ViewController.swift */; };
 		2710479E207BEFDC003C8FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2710479C207BEFDC003C8FB8 /* Main.storyboard */; };
 		271047A0207BEFDF003C8FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2710479F207BEFDF003C8FB8 /* Assets.xcassets */; };
 		271047A3207BEFDF003C8FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271047A1207BEFDF003C8FB8 /* LaunchScreen.storyboard */; };
+		271047AB207BF0E0003C8FB8 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047AA207BF0E0003C8FB8 /* ShoppingListTableViewController.swift */; };
+		271047AE207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 271047AC207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27104795207BEFDC003C8FB8 /* MyGrocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyGrocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27104798207BEFDC003C8FB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2710479A207BEFDC003C8FB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2710479D207BEFDC003C8FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2710479F207BEFDF003C8FB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		271047A2207BEFDF003C8FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		271047A4207BEFDF003C8FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		271047AA207BF0E0003C8FB8 /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
+		271047AD207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyGroceryDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				27104798207BEFDC003C8FB8 /* AppDelegate.swift */,
-				2710479A207BEFDC003C8FB8 /* ViewController.swift */,
 				2710479C207BEFDC003C8FB8 /* Main.storyboard */,
 				2710479F207BEFDF003C8FB8 /* Assets.xcassets */,
 				271047A1207BEFDF003C8FB8 /* LaunchScreen.storyboard */,
 				271047A4207BEFDF003C8FB8 /* Info.plist */,
+				271047AA207BF0E0003C8FB8 /* ShoppingListTableViewController.swift */,
+				271047AC207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld */,
 			);
 			path = MyGrocery;
 			sourceTree = "<group>";
@@ -135,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2710479B207BEFDC003C8FB8 /* ViewController.swift in Sources */,
 				27104799207BEFDC003C8FB8 /* AppDelegate.swift in Sources */,
+				271047AB207BF0E0003C8FB8 /* ShoppingListTableViewController.swift in Sources */,
+				271047AE207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +338,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		271047AC207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				271047AD207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodel */,
+			);
+			currentVersion = 271047AD207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodel */;
+			path = MyGroceryDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2710478D207BEFDC003C8FB8 /* Project object */;
 }
