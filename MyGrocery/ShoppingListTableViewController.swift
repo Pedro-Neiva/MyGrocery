@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ShoppingListTableViewController: UITableViewController {
+class ShoppingListTableViewController: UITableViewController, UITextFieldDelegate {
     
     var managedObjectContext: NSManagedObjectContext!
 
@@ -45,8 +45,8 @@ class ShoppingListTableViewController: UITableViewController {
         try! persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: nil)
         
         let type = NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType
-        self.managedObjectContext = NSManagedObjectContext(concurrencyType: type)
-        self.managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+        managedObjectContext = NSManagedObjectContext(concurrencyType: type)
+        managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
         
     }
     
@@ -65,10 +65,22 @@ class ShoppingListTableViewController: UITableViewController {
         textField.placeholder = "Enter Shopping List"
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         textField.leftViewMode = .always
+        textField.delegate = self
         
         headerView.addSubview(textField)
         
         return headerView
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        let shoppingList = NSEntityDescription.insertNewObject(forEntityName: "ShoppingList", into: managedObjectContext) as! ShoppingList
+        
+        shoppingList.title  = textField.text
+        
+        try! managedObjectContext.save()
+        
+        return textField.resignFirstResponder()
     }
     
 
