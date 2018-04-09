@@ -39,8 +39,27 @@ class ShoppingListTableViewController: UITableViewController, UITextFieldDelegat
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         
-        tableView.insertRows(at: [newIndexPath!], with: .automatic)
+        if type == .insert {
+            tableView.insertRows(at: [newIndexPath!], with: .automatic)
+        } else if type == .delete {
+            tableView.deleteRows(at: [indexPath!], with: .automatic)
+        }
+        
     }
+    
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            let shoppingList = fetchResultsController.object(at: indexPath)
+            
+            managedObjectContext.delete(shoppingList)
+            try! managedObjectContext.save()
+        }
+        
+        tableView.isEditing = false
+    }
+    
     
     func initializeCoreDataStack() {
         
