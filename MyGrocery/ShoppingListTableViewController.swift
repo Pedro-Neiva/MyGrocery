@@ -28,7 +28,7 @@ class ShoppingListTableViewController: UITableViewController, UITextFieldDelegat
         
         shoppingListDataProvider = ShoppingListDataProvider(managedObjectContext: managedObjectContext)
         
-        shoppingListDataSource = ShoppingListDataSource(cellIdentifier: "ShoppingListTableViewCell", shoppingListDataProvider: shoppingListDataProvider)
+        shoppingListDataSource = ShoppingListDataSource(cellIdentifier: "ShoppingListTableViewCell", tableView: tableView, shoppingListDataProvider: shoppingListDataProvider)
         
         tableView.dataSource = shoppingListDataSource
         

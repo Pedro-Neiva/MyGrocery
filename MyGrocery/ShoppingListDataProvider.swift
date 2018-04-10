@@ -9,7 +9,14 @@
 import Foundation
 import CoreData
 
+protocol ShoppingListDataProviderDelegate: class {
+    
+    func shoppingListDataProviderDidInsert(indexPath: IndexPath)
+}
+
 class ShoppingListDataProvider: NSObject, NSFetchedResultsControllerDelegate {
+    
+    weak var delegate: ShoppingListDataProviderDelegate!
     
     var fetchedResultsController: NSFetchedResultsController<ShoppingList>!
     
@@ -39,7 +46,7 @@ class ShoppingListDataProvider: NSObject, NSFetchedResultsControllerDelegate {
     
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         
-        
+        delegate.shoppingListDataProviderDidInsert(indexPath: newIndexPath!)
     }
     
     

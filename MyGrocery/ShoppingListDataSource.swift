@@ -8,14 +8,23 @@
 
 import UIKit
 
-class ShoppingListDataSource: NSObject, UITableViewDataSource {
+class ShoppingListDataSource: NSObject, UITableViewDataSource, ShoppingListDataProviderDelegate {
     
     var cellIdentifier: String!
+    var tableView: UITableView!
     var shoppingListDataProvider: ShoppingListDataProvider!
     
-    init(cellIdentifier: String, shoppingListDataProvider: ShoppingListDataProvider) {
+    init(cellIdentifier: String, tableView: UITableView, shoppingListDataProvider: ShoppingListDataProvider) {
         self.cellIdentifier = cellIdentifier
-        self.shoppingListDataProvider = shoppingListDataProvider        
+        self.tableView = tableView
+        self.shoppingListDataProvider = shoppingListDataProvider
+        
+        super.init()
+        shoppingListDataProvider.delegate = self
+    }
+    
+    func shoppingListDataProviderDidInsert(indexPath: IndexPath) {
+        tableView.insertRows(at: [indexPath], with: .automatic)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
