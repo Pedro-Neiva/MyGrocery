@@ -17,8 +17,6 @@ class ShoppingListTableViewController: UITableViewController, UITextFieldDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //initializeCoreDataStack()
         
         poupulateShoppingList()
     }
@@ -33,21 +31,6 @@ class ShoppingListTableViewController: UITableViewController, UITextFieldDelegat
         tableView.dataSource = shoppingListDataSource
         
     }
-    
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete {
-            let shoppingList = shoppingListDataProvider.objectAtIndex(at: indexPath)
-            
-            managedObjectContext.delete(shoppingList)
-            try! managedObjectContext.save()
-        }
-        
-        tableView.isEditing = false
-    }
-    
-    
     
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

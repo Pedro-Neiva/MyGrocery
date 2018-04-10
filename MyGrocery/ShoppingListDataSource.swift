@@ -31,6 +31,27 @@ class ShoppingListDataSource: NSObject, UITableViewDataSource, ShoppingListDataP
         return 1
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            let shoppingList = shoppingListDataProvider.objectAtIndex(at: indexPath)
+            
+            shoppingListDataProvider.delete(shoppingList: shoppingList)
+        }
+        
+        tableView.isEditing = false
+    }
+    
+    func shoppingListDataProviderDidDelete(indexPath: IndexPath) {
+        
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+    }
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         guard let sections = shoppingListDataProvider.sections else {
