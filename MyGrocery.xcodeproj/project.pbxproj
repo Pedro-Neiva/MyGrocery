@@ -13,6 +13,7 @@
 		271047A3207BEFDF003C8FB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271047A1207BEFDF003C8FB8 /* LaunchScreen.storyboard */; };
 		271047AB207BF0E0003C8FB8 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047AA207BF0E0003C8FB8 /* ShoppingListTableViewController.swift */; };
 		271047AE207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 271047AC207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld */; };
+		271047B0207D2C28003C8FB8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047AF207D2C28003C8FB8 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		271047A4207BEFDF003C8FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		271047AA207BF0E0003C8FB8 /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
 		271047AD207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyGroceryDataModel.xcdatamodel; sourceTree = "<group>"; };
+		271047AF207D2C28003C8FB8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				271047A1207BEFDF003C8FB8 /* LaunchScreen.storyboard */,
 				271047A4207BEFDF003C8FB8 /* Info.plist */,
 				271047AA207BF0E0003C8FB8 /* ShoppingListTableViewController.swift */,
+				271047AF207D2C28003C8FB8 /* CoreDataManager.swift */,
 				271047AC207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld */,
 			);
 			path = MyGrocery;
@@ -140,6 +143,7 @@
 			files = (
 				27104799207BEFDC003C8FB8 /* AppDelegate.swift in Sources */,
 				271047AB207BF0E0003C8FB8 /* ShoppingListTableViewController.swift in Sources */,
+				271047B0207D2C28003C8FB8 /* CoreDataManager.swift in Sources */,
 				271047AE207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
