@@ -14,6 +14,8 @@
 		271047AB207BF0E0003C8FB8 /* ShoppingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047AA207BF0E0003C8FB8 /* ShoppingListTableViewController.swift */; };
 		271047AE207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 271047AC207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld */; };
 		271047B0207D2C28003C8FB8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047AF207D2C28003C8FB8 /* CoreDataManager.swift */; };
+		271047B2207D309A003C8FB8 /* ShoppingListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047B1207D309A003C8FB8 /* ShoppingListDataProvider.swift */; };
+		271047B4207D361E003C8FB8 /* ShoppingListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047B3207D361E003C8FB8 /* ShoppingListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		271047AA207BF0E0003C8FB8 /* ShoppingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewController.swift; sourceTree = "<group>"; };
 		271047AD207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyGroceryDataModel.xcdatamodel; sourceTree = "<group>"; };
 		271047AF207D2C28003C8FB8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		271047B1207D309A003C8FB8 /* ShoppingListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListDataProvider.swift; sourceTree = "<group>"; };
+		271047B3207D361E003C8FB8 /* ShoppingListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				27104798207BEFDC003C8FB8 /* AppDelegate.swift */,
+				271047B1207D309A003C8FB8 /* ShoppingListDataProvider.swift */,
+				271047B3207D361E003C8FB8 /* ShoppingListDataSource.swift */,
 				2710479C207BEFDC003C8FB8 /* Main.storyboard */,
 				2710479F207BEFDF003C8FB8 /* Assets.xcassets */,
 				271047A1207BEFDF003C8FB8 /* LaunchScreen.storyboard */,
@@ -142,8 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				27104799207BEFDC003C8FB8 /* AppDelegate.swift in Sources */,
+				271047B2207D309A003C8FB8 /* ShoppingListDataProvider.swift in Sources */,
 				271047AB207BF0E0003C8FB8 /* ShoppingListTableViewController.swift in Sources */,
 				271047B0207D2C28003C8FB8 /* CoreDataManager.swift in Sources */,
+				271047B4207D361E003C8FB8 /* ShoppingListDataSource.swift in Sources */,
 				271047AE207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
