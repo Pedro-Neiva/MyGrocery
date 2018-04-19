@@ -40,8 +40,11 @@ class ShoppingListTableViewController: UITableViewController, UITextFieldDelegat
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let addNewItemView = AddNewItemView(controller: self, placeholderText: "Enter New Shopping List")
-        addNewItemView.delegate = self
+        let addNewItemView = AddNewItemView(controller: self, placeholderText: "Enter New Shopping List") { title in
+            
+            self.addNewShoppingList(title: title)
+        }
+        //addNewItemView.delegate = self
         
         return addNewItemView
         

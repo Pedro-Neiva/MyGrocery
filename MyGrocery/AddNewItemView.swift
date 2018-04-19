@@ -18,11 +18,14 @@ class AddNewItemView: UIView, UITextFieldDelegate {
     
     var placeholderText: String!
     weak var delegate: AddNewItemViewDelegate!
+    var addNewItemViewClosure: (String) -> ()
     
-    init(controller: UIViewController, placeholderText: String) {
+    init(controller: UIViewController, placeholderText: String, addNewItemViewClosure: @escaping (String) -> ()) {
+        
+        self.placeholderText = placeholderText
+        self.addNewItemViewClosure = addNewItemViewClosure
         
         super.init(frame: controller.view.frame)
-        self.placeholderText = placeholderText
         
         setup()
     }
@@ -49,7 +52,10 @@ class AddNewItemView: UIView, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         let text = textField.text!
-        delegate.addNewItemViewDidAddNewText(text: text)
+        
+        addNewItemViewClosure(text)
+        
+        //delegate.addNewItemViewDidAddNewText(text: text)
         
         return textField.resignFirstResponder()
     }
