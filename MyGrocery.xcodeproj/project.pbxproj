@@ -16,6 +16,7 @@
 		271047B0207D2C28003C8FB8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047AF207D2C28003C8FB8 /* CoreDataManager.swift */; };
 		271047B2207D309A003C8FB8 /* ShoppingListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047B1207D309A003C8FB8 /* ShoppingListDataProvider.swift */; };
 		271047B4207D361E003C8FB8 /* ShoppingListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271047B3207D361E003C8FB8 /* ShoppingListDataSource.swift */; };
+		271381C32089101100F0D5CC /* AddNewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271381C22089101100F0D5CC /* AddNewItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		271047AF207D2C28003C8FB8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		271047B1207D309A003C8FB8 /* ShoppingListDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListDataProvider.swift; sourceTree = "<group>"; };
 		271047B3207D361E003C8FB8 /* ShoppingListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListDataSource.swift; sourceTree = "<group>"; };
+		271381C22089101100F0D5CC /* AddNewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				271047A1207BEFDF003C8FB8 /* LaunchScreen.storyboard */,
 				271047A4207BEFDF003C8FB8 /* Info.plist */,
 				271047AA207BF0E0003C8FB8 /* ShoppingListTableViewController.swift */,
+				271381C22089101100F0D5CC /* AddNewItemView.swift */,
 				271047AF207D2C28003C8FB8 /* CoreDataManager.swift */,
 				271047AC207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld */,
 			);
@@ -150,6 +153,7 @@
 				27104799207BEFDC003C8FB8 /* AppDelegate.swift in Sources */,
 				271047B2207D309A003C8FB8 /* ShoppingListDataProvider.swift in Sources */,
 				271047AB207BF0E0003C8FB8 /* ShoppingListTableViewController.swift in Sources */,
+				271381C32089101100F0D5CC /* AddNewItemView.swift in Sources */,
 				271047B0207D2C28003C8FB8 /* CoreDataManager.swift in Sources */,
 				271047B4207D361E003C8FB8 /* ShoppingListDataSource.swift in Sources */,
 				271047AE207BF5B1003C8FB8 /* MyGroceryDataModel.xcdatamodeld in Sources */,

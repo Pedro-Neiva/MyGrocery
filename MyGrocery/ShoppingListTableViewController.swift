@@ -40,19 +40,10 @@ class ShoppingListTableViewController: UITableViewController, UITextFieldDelegat
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.size.width, height: 44))
+        let addNewItemView = AddNewItemView(frame: CGRect(x: 10, y: 0, width: tableView.frame.size.width, height: 44))
         
-        headerView.backgroundColor = UIColor.lightText
+        return addNewItemView
         
-        let textField = UITextField(frame: headerView.frame)
-        textField.placeholder = "Enter Shopping List"
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
-        textField.leftViewMode = .always
-        textField.delegate = self
-        
-        headerView.addSubview(textField)
-        
-        return headerView
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
