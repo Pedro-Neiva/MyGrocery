@@ -40,7 +40,7 @@ class ShoppingListTableViewController: UITableViewController, UITextFieldDelegat
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let addNewItemView = AddNewItemView(frame: CGRect(x: 10, y: 0, width: tableView.frame.size.width, height: 44))
+        let addNewItemView = AddNewItemView(controller: self, placeholderText: "Enter New Grocery Item")
         
         return addNewItemView
         

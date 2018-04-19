@@ -11,8 +11,12 @@ import UIKit
 
 class AddNewItemView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    var placeholderText :String!
+    
+    init(controller: UIViewController, placeholderText: String) {
+        
+        super.init(frame: controller.view.frame)
+        self.placeholderText = placeholderText
         
         setup()
     }
@@ -26,7 +30,7 @@ class AddNewItemView: UIView {
         headerView.backgroundColor = UIColor.lightText
         
         let textField = UITextField(frame: headerView.frame)
-        textField.placeholder = "Enter Shopping List"
+        textField.placeholder = placeholderText
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         textField.leftViewMode = .always
         //textField.delegate = self
