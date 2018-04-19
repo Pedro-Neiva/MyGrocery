@@ -9,9 +9,15 @@
 import Foundation
 import UIKit
 
-class AddNewItemView: UIView {
+protocol AddNewItemViewDelegate: class {
     
-    var placeholderText :String!
+    func addNewItemViewDidAddNewText(text: String)
+}
+
+class AddNewItemView: UIView, UITextFieldDelegate {
+    
+    var placeholderText: String!
+    weak var delegate: AddNewItemViewDelegate!
     
     init(controller: UIViewController, placeholderText: String) {
         
@@ -33,12 +39,23 @@ class AddNewItemView: UIView {
         textField.placeholder = placeholderText
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
         textField.leftViewMode = .always
-        //textField.delegate = self
+        textField.delegate = self
         
         headerView.addSubview(textField)
         
         addSubview(headerView)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        let text = textField.text!
+        delegate.addNewItemViewDidAddNewText(text: text)
+        
+        return textField.resignFirstResponder()
+    }
+    
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

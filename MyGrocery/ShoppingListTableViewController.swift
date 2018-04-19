@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ShoppingListTableViewController: UITableViewController, UITextFieldDelegate {
+class ShoppingListTableViewController: UITableViewController, UITextFieldDelegate, AddNewItemViewDelegate {
     
     var shoppingListDataSource: ShoppingListDataSource!
     var shoppingListDataProvider: ShoppingListDataProvider!
@@ -40,21 +40,24 @@ class ShoppingListTableViewController: UITableViewController, UITextFieldDelegat
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let addNewItemView = AddNewItemView(controller: self, placeholderText: "Enter New Grocery Item")
+        let addNewItemView = AddNewItemView(controller: self, placeholderText: "Enter New Shopping List")
+        addNewItemView.delegate = self
         
         return addNewItemView
         
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func addNewItemViewDidAddNewText(text: String) {
+        
+        addNewShoppingList(title: text)
+    }
+    
+    private func addNewShoppingList(title: String) {
         
         let shoppingList = NSEntityDescription.insertNewObject(forEntityName: "ShoppingList", into: managedObjectContext) as! ShoppingList
         
-        shoppingList.title  = textField.text
-        
+        shoppingList.title  = title
         try! managedObjectContext.save()
-        
-        return textField.resignFirstResponder()
     }
     
 
